@@ -1,0 +1,117 @@
+body{
+  background-color: lightgray;
+  //选择器嵌套
+  header{
+    background-color: lightgreen;
+  }
+
+  //属性嵌套
+  footer{
+    background:{
+      color: red;
+      size:100% 50%;
+    }
+  }
+
+  //父级选择器引用
+  a{
+    color: red;
+    &:hover{
+      color:blue;
+    }
+    &.content{
+      color:lawngreen;
+    }
+    @at-root .container1{
+      width:1000px;
+    }
+  }
+  //跳出嵌套
+  @at-root .container2{
+    width:1000px;
+  }
+
+
+  //跳出media 嵌套
+  @media screen and (max-width:600px){
+    @at-root(without: media){
+      .container3{
+        background: lightgreen;
+      }
+    }
+  }
+
+  @media screen and (max-width:600px){
+    @at-root(without: media rule){
+      .container3{
+        background: lightgreen;
+      }
+    }
+  }
+
+  @at-root .text-info{
+    color: red;
+    @at-root nav &{
+      color:blue;
+    }
+  }
+
+}
+
+//继承
+.alert{
+  background-color: chocolate;
+  @extend body;
+}
+.small{
+  font-size:12px;
+
+}
+
+.alert-info{
+  @extend .alert;
+  @extend .small;
+  color:red;
+}
+
+//链式继承
+.one {
+  border:1px solid red;
+}
+.two{
+  @extend .one;
+  color:red;
+}
+.three {
+  @extend .two;
+  border-radius:4px;
+}
+
+//交叉继承（一般不符合预期）
+a span{
+  font-weight: bold;
+}
+div .content{
+  @extend span;
+
+}
+//注：部分选择器无法被继承如(.one .two)或者(.one+.two)
+
+
+//media 会形成一个作用域，所以内部不能继承外部，需要在里面定义
+@media screen and (max-width:600px){
+  .two2{
+    background: chocolate;
+  }
+  .test{
+    @extend .two2;
+  }
+}
+
+//占位符%最终编译好的css不会有这个样式
+%alert{
+  background: chocolate;
+}
+.two{
+  @extend %alert;
+}

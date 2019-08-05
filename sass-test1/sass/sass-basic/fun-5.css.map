@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAKA,IAAI;EACF,KAAK,EAAC,OAAc;EACpB,gBAAgB,EAAE,sBAAmB;EACrC,KAAK,EAAE,CAAS",
+"sources": ["fun-5.scss"],
+"names": [],
+"file": "fun-5.css"
+}

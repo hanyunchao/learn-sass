@@ -1,0 +1,36 @@
+@mixin cont{
+  color:red;
+}
+
+@mixin cont($color:blue,$fontsize:14px){
+  header{
+    background-color: cornflowerblue;
+  }
+  font-size: $fontsize;
+  color:$color;
+}
+
+body{
+  @include cont(#fff,20px);
+}
+
+@mixin box-shadow($shadow...){
+  -moz-box-shadow: $shadow;
+  -webkit-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+.shadows{
+  @include box-shadow(0px 4px 4px #555,2px 6px 10px #6dd3ee)
+}
+
+@mixin style-for-iphone{
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px){
+    @content;
+  }
+}
+
+@include style-for-iphone{
+  body{
+    background: chocolate;
+  }
+}

@@ -1,0 +1,18 @@
+.index{
+  .hero-image{
+    width:span(6);
+    text-align:left;
+    display: table-cell;
+    vert-align: middle;
+  }
+  .hero-image{
+    @extend %col6-cell;
+    img{
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .introduction{
+    @extend %col6-cell;
+  }
+}

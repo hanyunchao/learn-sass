@@ -1,0 +1,36 @@
+//数字类型
+$n1:1.2;
+$n2:12;
+$n3:14px;
+p{
+  font-size: $n3;
+}
+
+//字符串类型
+$s1:container;
+$s2:'container';
+$s3:"container";
+.#{$s3}{
+  font-size: $n3;
+}
+
+//布尔类型
+$bt:true;
+$bf:false;
+
+//Null类型
+$null:null;
+body{
+  @if ($null == null){
+    color: red;
+  }
+}
+
+//颜色类型
+$c1:blue;
+$c2:#fff;
+$c3:rgba(255,255,0,0.5);
+
+
+
+

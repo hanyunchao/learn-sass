@@ -1,0 +1,78 @@
+body, .alert, .alert-info {
+  background-color: lightgray;
+}
+body header, .alert header, .alert-info header {
+  background-color: lightgreen;
+}
+body footer, .alert footer, .alert-info footer {
+  background-color: red;
+  background-size: 100% 50%;
+}
+body a, .alert a, .alert-info a {
+  color: red;
+}
+body a:hover, .alert a:hover, .alert-info a:hover {
+  color: blue;
+}
+body a.content, .alert a.content, .alert-info a.content {
+  color: lawngreen;
+}
+.container1 {
+  width: 1000px;
+}
+.container2 {
+  width: 1000px;
+}
+body .container3, .alert .container3, .alert-info .container3 {
+  background: lightgreen;
+}
+
+.container3 {
+  background: lightgreen;
+}
+
+.text-info {
+  color: red;
+}
+nav .text-info {
+  color: blue;
+}
+
+.alert, .alert-info {
+  background-color: chocolate;
+}
+
+.small, .alert-info {
+  font-size: 12px;
+}
+
+.alert-info {
+  color: red;
+}
+
+.one, .two, .three {
+  border: 1px solid red;
+}
+
+.two, .three {
+  color: red;
+}
+
+.three {
+  border-radius: 4px;
+}
+
+a span, a div .content, div a .content {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+  .two2, .test {
+    background: chocolate;
+  }
+}
+.two, .three {
+  background: chocolate;
+}
+
+/*# sourceMappingURL=2.css.map */
