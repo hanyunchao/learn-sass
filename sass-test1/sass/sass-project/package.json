@@ -11,7 +11,7 @@
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "del": "^5.0.0",
-    "gulp": "^3.9",
+    "gulp": "^4.0",
     "gulp-compass": "^2.1.0",
     "run-sequence": "^2.2.1"
   }
